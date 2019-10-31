@@ -1,0 +1,36 @@
+{
+  "ipcMode": "none",
+  "executionRoleArn":"",
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "${LOG_GROUP}",
+          "awslogs-region": "${LOG_GROUP_REGION}",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "protocol": "tcp",
+          "containerPort": 80
+        }
+      ],
+      "memory": 128,
+      "stopTimeout": 10,
+      "image": "darknezz/hello:latest",
+      "startTimeout": 10,
+      "disableNetworking": false,
+      "interactive": true,
+      "essential": true,
+      "readonlyRootFilesystem": false,
+      "privileged": true,
+      "name": "tom_helloworld"
+    }
+  ],
+  "taskRoleArn": "",
+  "family": "${FAMILY}",
+  "networkMode": "bridge"
+}
