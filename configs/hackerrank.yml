@@ -1,0 +1,15 @@
+version: 1.0
+configuration:
+  has_webserver: false
+  scoring:
+    command: bash score.sh
+  readonly_paths:
+    - score.sh
+    - hackerrank.yml
+  ide_config:
+    default_open_files:
+      - main.tf
+    project_menu:
+      run: terraform init && terraform plan
+      install: terraform init && terraform plan -out plan && terraform apply plan
+      test: terraform validate

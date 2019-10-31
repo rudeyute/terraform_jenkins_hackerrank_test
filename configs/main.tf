@@ -1,0 +1,1 @@
+//Implement simple AWS infrastructure here
