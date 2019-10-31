@@ -6,7 +6,7 @@ if sudo apt-get install unzip; then
     sudo mv terraform /usr/local/bin/
     terraform --version
 
-    cd config
+    cd configs
     terraform init
     echo 'Pass'
     exit 0

@@ -21,7 +21,3 @@ if terraform validate; then
 else
 print_score
 fi
-
-print_score() {
-  echo "FS_SCORE:${SCORE}%"
-}
