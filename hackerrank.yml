@@ -8,6 +8,7 @@ configuration:
   ide_config:
     default_open_files:
       - config/main.tf
+      - config/pipeline.yml
       - config/task_definition/task.json
     project_menu:
       run: cd configs && terraform plan -out plan && terraform apply plan
