@@ -10,5 +10,7 @@ SCORE = SCORE + 45
       SCORE = SCORE + 15
     fi
   fi
+else
+echo "FS_SCORE:${SCORE}%"
 fi
 
