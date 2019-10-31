@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 
 SCORE=0
+cd configs
+
+print_score() {
+  echo "FS_SCORE:${SCORE}%"
+}
 
 if terraform validate; then
-SCORE = SCORE + 45
+  (( SCORE += 45 ))
   if terraform plan -out plan; then
-  SCORE = SCORE + 15
+  (( SCORE += 15 ))
     if terraform apply plan; then
-      SCORE = SCORE + 15
+      (( SCORE += 15 ))
       print_score
     fi
     print_score

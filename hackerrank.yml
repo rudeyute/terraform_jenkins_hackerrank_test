@@ -10,6 +10,6 @@ configuration:
       - config/main.tf
       - config/task_definition/task.json
     project_menu:
-      run: cd configs && terraform init && terraform plan
+      run: cd configs && terraform plan -out plan && terraform apply plan
       install: bash install.sh
       test: cd configs && terraform validate

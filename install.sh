@@ -5,6 +5,9 @@ if sudo apt-get install unzip; then
     unzip terraform_0.12.12_linux_amd64.zip
     sudo mv terraform /usr/local/bin/
     terraform --version
+
+    cd config
+    terraform init
     echo 'Pass'
     exit 0
   fi
