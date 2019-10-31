@@ -11,5 +11,5 @@ configuration:
       - config/task_definition/task.json
     project_menu:
       run: cd configs && terraform init && terraform plan
-      install: cd configs && terraform init && terraform plan -out plan && terraform apply plan
+      install: bash install.sh
       test: cd configs && terraform validate
