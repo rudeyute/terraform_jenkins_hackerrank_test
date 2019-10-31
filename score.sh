@@ -8,9 +8,15 @@ SCORE = SCORE + 45
   SCORE = SCORE + 15
     if terraform apply plan; then
       SCORE = SCORE + 15
+      print_score
     fi
+    print_score
   fi
+  print_score
 else
-echo "FS_SCORE:${SCORE}%"
+print_score
 fi
 
+print_score() {
+  echo "FS_SCORE:${SCORE}%"
+}
