@@ -5,11 +5,11 @@ configuration:
     command: bash score.sh
   readonly_paths:
     - score.sh
-    - hackerrank.yml
   ide_config:
     default_open_files:
-      - main.tf
+      - config/main.tf
+      - config/task_definition/task.json
     project_menu:
-      run: terraform init && terraform plan
-      install: terraform init && terraform plan -out plan && terraform apply plan
-      test: terraform validate
+      run: cd configs && terraform init && terraform plan
+      install: cd configs && terraform init && terraform plan -out plan && terraform apply plan
+      test: cd configs && terraform validate
